@@ -3,7 +3,17 @@ entries:
   enqualifycapi:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-10-14T14:39:24.577983344+03:00"
+    created: "2024-10-18T16:23:05.505207933+03:00"
+    description: A Helm chart for Kubernetes
+    digest: a8551587826ffcc31fc96d44cf57003d59d8a9b19b586cf7ce5e03b56b47c8a8
+    name: enqualifycapi
+    type: application
+    urls:
+    - enqualifycapi-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-10-18T16:23:05.504673421+03:00"
     description: A Helm chart for Kubernetes
     digest: 91bc414e192082e9f107252116b027353a364cd1d27bb90f66551840ebdba73b
     name: enqualifycapi
@@ -11,4 +21,4 @@ entries:
     urls:
     - enqualifycapi-0.1.0.tgz
     version: 0.1.0
-generated: "2024-10-14T14:39:24.576410027+03:00"
+generated: "2024-10-18T16:23:05.503746701+03:00"
