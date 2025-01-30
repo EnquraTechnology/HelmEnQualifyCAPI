@@ -10,13 +10,13 @@ spec:
     io.service: enqualify-capi
   ingressClassName: {{ .Values.ingressClassName }}
   rules:
-  - host: 
+  - host: {{ .Values.rules.host }}
     http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: driver
+            name: enqualify-capi
             port:
-              number: 80
+              number: 8080

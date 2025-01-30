@@ -3,10 +3,8 @@ namespace: enqualifyapp
 
 # Image
 image:
-  #firma ismi ile oluşturulan customer api repo ismi yazılır.
-  repository: dockerhub.io/enqualify-capi-....
-  #mail ile güncel tag iletilir.
-  tag: "20240813.1"
+  repository: ""
+  tag: ""
   pullPolicy: IfNotPresent
 
 # Replica
@@ -18,9 +16,10 @@ service:
   port: 8080
   targetPort: 8080
 
-# Image
-imagePullSecrets:
-  - name: dockerhubsecret
+# Ingress
+ingressClassName: nginx
+rules:
+  host: enqualifycapi.example.com
 
 # Deployment
 strategy:
@@ -37,14 +36,6 @@ volumes:
   videopvc:
     persistentVolumeClaim:
       claimName: enqualify-capi-claim
-
-# Volume
-volumeMounts:
-  appsettingsjs:
-    mountPath: /opt/app-root/app/appsettings.json
-    subPath: appsettings.json
-  videopvc:
-    mountPath: /opt/app-root/app/files
 
 # Uygulama
 application:
